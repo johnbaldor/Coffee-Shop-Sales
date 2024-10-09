@@ -1,0 +1,120 @@
+﻿coffee_shop.c
+
+
+
+
+In Main:
+
+
+Initialize variables 
+
+
+Open first text file and scan
+Collect data in array 
+Repeat for rest of text files 
+
+
+Prompt user for value:
+“Which program would you like to run?
+(1)Output the monthly sales of an item.
+(2) Calculate overall sales for all items.
+(3) Find the most popular item.”
+
+
+Get value(1-3) from terminal and store in variable
+If value = 1: call print_item() and pass row size, column size, data array
+If value = 2: call total_sales() and pass row size, column size, data array
+If value = 3: call top_overall() and pass row size, column size, data array
+
+
+
+
+
+
+
+
+Register.c
+
+
+Void print_item(int rows, int cols, int data[][cols]):
+
+
+Initialize variables 
+Create list for sales of item 
+
+
+Prompt user for item number
+Store input in variable 
+
+
+Loop through months in first array dimension in each month: 
+      Loop through items in second array dimension under month:
+        If item = user input:
+                Store item sales in list of sales 
+                Break 
+
+
+
+
+
+
+Print months to terminal in line 
+Loop through list of item sales:
+Print each sale to terminal 
+
+
+
+
+
+
+
+
+
+
+Void total_sales(int rows, int cols, int data[][cols]):
+
+
+Initialize text output file 
+Print “Item\tSales\n” to output file 
+Initialize counter
+
+
+Loop through each item number:
+        Reset counter to 0
+
+
+        Loop through each month:
+                Add sales at place of item and month to counter
+
+
+        Print counter to text output file
+
+
+
+
+
+
+
+
+
+
+Void top_overall(int rows, int cols, int data[][cols]);
+
+
+Initialize variables 
+
+
+Loop through each item number:
+        Reset counter to 0
+
+
+        Loop through each month:
+                Add item sales of that month to counter 
+
+
+        If counter is higher than highest amount of sales so far:
+                Highest amount of sale == counter 
+                Item with the highest amount of sales = index(item number)
+
+
+Print “ The most popular item is item (item with highest amount of sales)”
